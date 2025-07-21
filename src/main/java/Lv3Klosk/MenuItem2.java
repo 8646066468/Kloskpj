@@ -1,15 +1,12 @@
-package Lv2Klosk;
+package Lv3Klosk;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
-public class MenuItem {
-    private String name;
-    private double price;
-    private String description;
+public class MenuItem2 {
+    private final String name;
+    private final double price;
+    private final String description;
 
-    MenuItem(String name, double price, String description) {
+    MenuItem2(String name, double price, String description) {
         this.name = name;
         this.price = price;
         this.description = description;

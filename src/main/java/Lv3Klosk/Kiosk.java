@@ -1,14 +1,12 @@
 package Lv3Klosk;
 
-
-
 import java.util.List;
 import java.util.Scanner;
 
 public class Kiosk {
-    private final List<MenuItem> menuItems;
+    private final List<MenuItem2> menuItems;
 
-    public Kiosk(List<MenuItem> menuItems) {
+    public Kiosk(List<MenuItem2> menuItems) {
         this.menuItems = menuItems;
     }
 
@@ -18,7 +16,7 @@ public class Kiosk {
         while (true) {
             System.out.println("[ SHAKE SHACK MENU ]");
             int index = 1;
-            for (MenuItem menu : menuItems) {
+            for (MenuItem2 menu : menuItems) {
                 System.out.printf("%d. %s  | W %.1f | %s\n",
                         index++, menu.getName(), menu.getPrice(), menu.getDescription());
             }
@@ -30,7 +28,7 @@ public class Kiosk {
                 break;
             } else if (choice >= 1 && choice <= menuItems.size()) {
                 //menuItems의 인덱스는 0부터 시작하므로 choice에 1을 입력하면 -1해서 0부터 받아옴
-                MenuItem selected = menuItems.get(choice - 1);
+                MenuItem2 selected = menuItems.get(choice - 1);
                 System.out.printf("%s를 선택하셨습니다.  W %.1f\n", selected.getName(), selected.getPrice());
 
             } else {
@@ -40,7 +38,3 @@ public class Kiosk {
         sc.close();
     }
 }
-
-
-
-

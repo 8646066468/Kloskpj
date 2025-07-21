@@ -1,16 +1,16 @@
-package Lv3Klosk;
+package Lv4Klosk;
 
-
-public class MenuItem {
+public class MenuItem3 {
     private final String name;
     private final double price;
     private final String description;
 
-    MenuItem(String name, double price, String description) {
-        this.name = name;
-        this.price = price;
-        this.description = description;
+    MenuItem3(String name, double price, String description) {
+        this.name = name; //메뉴이름
+        this.price = price; //메뉴 가격
+        this.description = description; //메뉴 설명
     }
+    //getter 메서드
     public String getName() {
         return name;
     }
@@ -21,5 +21,4 @@ public class MenuItem {
     public String getDescription() {
         return description;
     }
-
 }
